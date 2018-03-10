@@ -20,10 +20,8 @@
       </ul>
     </nav>
     <div class="container" >
-
-
   <section class="hero" style="background-image: url('img/laptop.png'); background-position: bottom; background-size: 400px; background-repeat: no-repeat;  ">
-    <div >
+    <div>
       <h2>All UI Elements</h2>
       <p class="lead">This is a page that will list all of the UI elements for this design. This is a page that will list all of the UI elements for this design.
       <p><a href="#" class="">Button</a></p>
@@ -62,6 +60,37 @@
   </section>
   <section class="experiments">
     <h2>Currently experimenting with...</h2>
+
+
+<div class="w3-content w3-display-container" style="max-width:800px">
+  <div class="w3-display-container mySlides">
+    <img src="img/1.jpg" style="width:100%">
+    <div class="w3-display-bottomleft w3-container w3-padding-16 w3-black">
+      Robin
+    </div>
+  </div>
+  <div class="w3-display-container mySlides">
+    <img src="img/1.jpg" style="width:100%">
+    <div class="w3-display-bottomleft w3-container w3-padding-16 w3-black">
+      Rihanna
+    </div>
+  </div>
+  <div class="w3-display-container mySlides">
+    <img src="img/1.jpg" style="width:100%">
+    <div class="w3-display-bottomleft w3-container w3-padding-16 w3-black">
+      Fenty
+    </div>
+  </div>
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+
+
     <p class="lead center" >Here are some things I want to show you I have been trying out</p>
     <ul>
       <li>Vanilla JavaScript</li>
@@ -92,7 +121,7 @@
   <section class="current-projects dark-section-white-text">
     <h2>Current Projects</h2>
     <div id="carousel" >
-      <div class="slide-image" id="slide-image" style="background-image: url('img/laptop.png');" >
+      <div class="slide-image" id="fade-in" style="background-image: url('img/laptop.png');" >
         &nbsp;
       </div>
       <div class="slide-text">
@@ -102,7 +131,7 @@
 
     </div>
     <div class="slider-buttons">
-      <a href="#" class="arrow-buttons"><</a><a href="#" class="arrow-buttons">></a>
+      <a href="#" class="arrow-buttons"><</a><a href="#" class="arrow-buttons slide-arrow-button">></a>
     </div>
 
   </section>
@@ -110,72 +139,89 @@
     <h2>Previous Projects</h2>
     <p class="lead  center">I have been in and around startups my whole life...</p>
 
-    <div class="previous-projects-card">
-      <img src="img/1.jpg" style="">
-      <h4>Mobile First Money Transfer</h4>
-      <p>This was a thing that had these standout features</p>
-      <small>2006</small>
-      <ul>
-        <li>PHP</li>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
-    </div>
-    <div class="previous-projects-card">
-      <img src="img/1.jpg" style="">
-      <h4>Head Of Operaitions</h4>
-      <p>This was a thing that had these standout features</p>
-      <small>2006</small>
-      <ul>
-        <li>PHP</li>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
-    </div>
-    <div class="previous-projects-card">
-      <img src="img/1.jpg" style="">
-      <h4>Digital Marketing Consultant</h4>
-      <p>This was a thing that had these standout features</p>
-      <small>2006</small>
-      <ul>
-        <li>PHP</li>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
-    </div>
+    <a href="single_post.html" class="project-card-link">
       <div class="previous-projects-card">
-      <img src="img/1.jpg" style="">
-      <h4>Mobile First Money Transfer</h4>
-      <p>This was a thing that had these standout features</p>
-      <small>2006</small>
-      <ul>
-        <li>PHP</li>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
-    </div>
-    <div class="previous-projects-card">
-      <img src="img/1.jpg" style="">
-      <h4>Head Of Operaitions</h4>
-      <p>This was a thing that had these standout features</p>
-      <small>2006</small>
-      <ul>
-        <li>PHP</li>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
-    </div>
-    <div class="previous-projects-card">
-      <img src="img/1.jpg" style="">
-      <h4>Digital Marketing Consultant</h4>
-      <p>This was a thing that had these standout features</p>
-      <small>2006</small>
-      <ul>
-        <li>PHP</li>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
-    </div>
+        <img src="img/1.jpg" style="">
+        <h4>Mobile First Money Transfer</h4>
+        <p>This was a thing that had these standout features</p>
+        <small>2006</small>
+        <ul>
+          <li>PHP</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </div>
+    </a>
+
+    <a href="single_post.html" class="project-card-link">
+      <div class="previous-projects-card">
+        <img src="img/1.jpg" style="">
+        <h4>Mobile First Money Transfer</h4>
+        <p>This was a thing that had these standout features</p>
+        <small>2006</small>
+        <ul>
+          <li>PHP</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </div>
+    </a>
+
+    <a href="single_post.html" class="project-card-link">
+      <div class="previous-projects-card">
+        <img src="img/1.jpg" style="">
+        <h4>Mobile First Money Transfer</h4>
+        <p>This was a thing that had these standout features</p>
+        <small>2006</small>
+        <ul>
+          <li>PHP</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </div>
+    </a>
+
+    <a href="single_post.html" class="project-card-link">
+      <div class="previous-projects-card">
+        <img src="img/1.jpg" style="">
+        <h4>Mobile First Money Transfer</h4>
+        <p>This was a thing that had these standout features</p>
+        <small>2006</small>
+        <ul>
+          <li>PHP</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </div>
+    </a>
+
+    <a href="single_post.html" class="project-card-link">
+      <div class="previous-projects-card">
+        <img src="img/1.jpg" style="">
+        <h4>Mobile First Money Transfer</h4>
+        <p>This was a thing that had these standout features</p>
+        <small>2006</small>
+        <ul>
+          <li>PHP</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </div>
+    </a>
+
+    <a href="single_post.html" class="project-card-link">
+      <div class="previous-projects-card">
+        <img src="img/1.jpg" style="">
+        <h4>Mobile First Money Transfer</h4>
+        <p>This was a thing that had these standout features</p>
+        <small>2006</small>
+        <ul>
+          <li>PHP</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </div>
+    </a>
 
   </section>
   <footer class="footer">

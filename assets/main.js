@@ -12,7 +12,7 @@ function toggleNav() {
   };
 };
 
-// Slider
+// Auto Slider
 var myImage = document.getElementById("slide-image");
 	var ArrayImage = ["background-image: url(img/laptop.png);", "background-image: url(img/1.jpg);", "background-image: url(img/2.jpg);"];
 	var imageIdex = 0;
@@ -23,4 +23,33 @@ var myImage = document.getElementById("slide-image");
 			imageIdex = 0;
 		}
 	}
-	setInterval(changeImage, 4000);
+	setInterval(changeImage, 2000);
+
+
+
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function currentDiv(n) {
+    showDivs(slideIndex = n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+       dots[i].className = dots[i].className.replace(" w3-white", "");
+    }
+    x[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " w3-white";
+  }
