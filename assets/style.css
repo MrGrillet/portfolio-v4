@@ -45,8 +45,8 @@ input, select {
 
 
 @font-face {
-  font-family           : 'Inter UI', helvetica, sans-serif;
-  src                   : url('https://rsms.me/inter/inter-ui.css');
+  font-family        : 'Inter UI', helvetica, sans-serif;
+  src                : url('https://rsms.me/inter/inter-ui.css');
 }
 
 p, li, td,
@@ -64,7 +64,6 @@ h2 {font-size						      : 31px;}
 h3 {font-size						      : 27px;}
 h4 {font-size						      : 23px;}
 h5 {font-size						      : 19px;}
-
 h6 {
 	text-transform					    : uppercase;
 	font-size						        : 16px;
@@ -141,9 +140,7 @@ nav ul a {
   margin-bottom               : 0;
 }
 
-a:hover small {
-  color                       : #000;
-}
+
 
 /*  200. Content  */
 
@@ -166,6 +163,7 @@ project-card {
 
 .history {
 	grid-area 						      : history;
+  text-align: center;
 }
 
 .tool-kit {
@@ -178,14 +176,6 @@ project-card {
 
 .future {
   grid-area 						      : future;
-}
-
-.history-2 {
-	grid-area 						      : history-2;
-}
-
-.future-2 {
-	grid-area 						      : future-2;
 }
 
 .current-projects {
@@ -209,11 +199,12 @@ footer {
 	grid-gap 						        : 20px;
 	grid-template-areas 		    :
 		"hero"
-		"future"
 		"history"
+		"future"
 		"current-projects"
-		"history-2"
-		"future-2"
+
+
+
 		"articles"
 		"article"
     "main"
@@ -238,6 +229,7 @@ nav {
   width                       : 300px;
   color                       : #fff;
   background-color            : #111;
+  z-index: 30;
   transition                  : all ease-in-out 200ms;
 }
 
@@ -247,7 +239,7 @@ nav {
   right                       : 40px;
   padding                     : 20px;
   background-color            : #111;
-  z-index                     : 30;
+  z-index                     : 130;
 }
 
 nav ul {
@@ -280,11 +272,19 @@ section {
 	/* background-color 				    : #f2f2f2; */
 }
 
- .hero p, .hero .lead {
+ .hero p,
+ .hero .lead {
 	vertical-align 					    : middle;
-	text-align 							    : center;
   max-width                   : 100%;
   padding                     : 10px 20% 16px 20%;
+}
+
+.history p,
+.history .lead,
+.future p,
+.future .lead  {
+ vertical-align 					    : middle;
+ max-width                   : 100%;
 }
 
 section h2 {
@@ -299,10 +299,36 @@ section h2 {
 
 .hero {
 	grid-area 						      : hero;
-	height 							        : 70vh;
 	max-height 						      : 700px;
-	margin-top 						      : 40px;
-	text-align 						      : center;
+	margin-top 						      : 0px;
+  width                       : 100%;
+  height                      : 400px;
+  background-repeat           : no-repeat;
+  background-size             : cover;
+  background-position         : center center;
+  border-top-left-radius      : 4px;
+  border-top-right-radius     : 4px;
+}
+
+.left-screen {
+ float: left;
+ width: 50%;
+ height                      : 400px;
+ background-repeat           : no-repeat;
+ background-size             : cover;
+ background-position         : center center;
+ border-top-left-radius     : 4px;
+ border-bottom-left-radius:  4px;
+}
+
+.right-screen {
+  float: right;
+  width                       : 50%;
+  height                      : 400px;
+  background-repeat           : no-repeat;
+  background-size             : cover;
+  background-position         : center center;
+  border-top-right-radius     : 4px;
 }
 
 .dark-section-white-text {
@@ -312,13 +338,187 @@ section h2 {
 
 .dark-section-white-text p,
 .dark-section-white-text h2,
-.dark-section-white-text h3 {
+.dark-section-white-text h3,
+.dark-section-white-text h4,
+.dark-section-white-text h5,
+.dark-section-white-text h6,
+.dark-section-white-text a,
+.dark-section-white-text ul,
+.dark-section-white-text ol,
+.dark-section-white-text li   {
 	color 							        : #fff !important;
+}
+
+.section-container{
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+
+.languages-frameworks ul {
+  width: 100%;
+}
+.languages-frameworks li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.left {
+	float 							        : left;
+}
+
+.right {
+	float 							        : right;
+}
+
+.categories,
+.article-share {
+	display 						        : block;
+	width 							        : 100%;
+	border-left 					      : #111;
+	height 							        : 30px;
+}
+
+.categories ul,
+.article-share ul {
+	width 							        : 100%;
+}
+
+.code-languages-list ul {
+margin-left: 0px;
+background-color: #000;
+}
+
+.code-languages-list li  {
+  display: inline-block;
+  margin-left: 0px;
+}
+
+.categories li,
+.article-share li {
+	float 							        : left;
+	list-style-type 				    : none;
+	margin-left                 : 0;
+	margin-right                : 10px;
+}
+
+footer ul {
+	width                       : fit-content;
+	text-align                  : center;
+}
+
+footer ul li a {
+	width                       : fit-content;
+}
+
+.background-card {
+	max-width                   : 100%;
+  padding                     : 10px;
+  margin                      : 10px;
+  float                       : left;
+  text-align: center;
+}
+
+
+/* Project Cards */
+
+
+.project-card {
+  max-width                   : 550px;
+  padding                     : 10px;
+  margin                      : 10px;
+  float                       : left;
+  border                      : 2px solid #111;
+}
+
+.previous-projects-card {
+	max-width                   : 100%;
+	margin                      : 10px;
+	float                       : left;
+  border-radius: 4px;
+  padding                     : 0px;
+  background-color: #eee;
+
+}
+
+.previous-projects-card li,
+.project-card li {
+	float                       : left;
+	list-style                  : none;
+	display                     : inline-block;
+	margin-right                : 10px;
+}
+
+.previous-projects-card p,
+.previous-projects-card h4,
+.previous-projects-card small,
+.previous-projects-card li {
+  margin: 8px 16px 16px 16px;
+}
+
+a:hover small {
+  color                       : #111;
+}
+
+.previous-projects-card img,
+.project-card img {
+	width                       : 100%;
+  margin-top                  : 0;
+}
+
+a .project-card-link {
+  border                      : 0;
+}
+
+
+/* Media */
+
+
+img {
+  max-width                   : 100%;
+  border-radius: 4px;
+}
+
+/* carousel */
+
+.carousel {
+  background-color            : #eee;
+  border-radius               : 4px;
+  padding                     : 0px;
+  width                       : 100%;
+
+}
+
+.slides {
+  width                       : 100%;
+  transition                  : all 2.75s ease;
+  display:none
+  padding: 10px;
+}
+
+.slide-image {
+  width                       : 100%;
+  height                      : 400px;
+  background-repeat           : no-repeat;
+  background-size             : cover;
+  background-position         : center center;
+  border-top-left-radius      : 4px;
+  border-top-right-radius     : 4px;
+}
+
+.slide-caption {
+padding: 16px;
+height: 240px;
+}
+
+.slide-caption h3,
+.slide-caption p  {
+ margin: 16px 0 0 0 ;
 }
 
 .slider-buttons {
 	float 							        : right;
-	margin-right 					      : -21px;
+	margin-right 					      : 0px;
 	margin-top 						      : -6px;
 	text-decoration 				    : none;
 	margin-left 					      : 20px;
@@ -344,120 +544,7 @@ section h2 {
 }
 
 
-
-.left {
-	float 							        : left;
-}
-
-.right {
-	float 							        : right;
-}
-
-.categories, .article-share {
-	display 						        : block;
-	width 							        : 100%;
-	border-left 					      : #111;
-	height 							        : 30px;
-}
-
-.categories ul,
-.article-share ul {
-	width 							        : 100%;
-}
-
-.categories li,
-.article-share li {
-	float 							        : left;
-	list-style-type 				    : none;
-	margin-left                 : 0;
-	margin-right                : 10px;
-}
-
-footer ul {
-	width                       : fit-content;
-	text-align                  : center;
-}
-
-footer ul li a {
-	width                       : fit-content;
-}
-
-/* Project Cards */
-
-.project-card {
-  max-width                   : 550px;
-  padding                     : 10px;
-  margin                      : 10px;
-  float                       : left;
-  border                      : 2px solid #111;
-}
-
-.previous-projects-card {
-	max-width                   : 100%;
-	margin                      : 10px;
-	float                       : left;
-  border                      : 2px solid #111;
-  padding                     : 10px;
-}
-
-.previous-projects-card li,
-.project-card li {
-	float                       : left;
-	list-style                  : none;
-	display                     : inline-block;
-	margin-right                : 10px;
-	background-color            : #fff;
-}
-
-.previous-projects-card img,
-.project-card img {
-	width                       : 100%;
-  margin-top                  : 0;
-}
-
-a .project-card-link {
-  border                      : 0;
-}
-
-
-
-/* Media */
-
-img {
-  max-width                   : 100%;
-}
-
-/* carousel */
-
-#carousel {
-  color                       : #fff;
-  border-radius               : 4px;
-  padding                     : 0px;
-  z-index                     : 15;
-}
-
-.slide-image {
-	min-width                   : 400px ;
-	min-height                  : 400px;
-	background-repeat           : no-repeat;
-	background-size             : cover;
-	background-position         : center center;
-  transition                  : all .75s ease;
-}
-
-.slide-text {
-	margin-top                  : 20px;
-}
-
-.mySlides {display:none}
-.w3-left, .w3-right, .w3-badge {cursor:pointer}
-.w3-badge {height:13px;width:13px;padding:0}
-.w3-display-bottomleft {
-  margin-bottom: -60px !important;
-}
-
 /* ARTICLES */
-
 
 
 article {
@@ -501,7 +588,7 @@ article li {
 
 .img-center {
 	width                       : 100%;
-	max-width                   : 900px;
+	max-width                   : 650px;
 	height                      : auto;
 	margin-bottom               : 15px;
 	margin-top                  : 15px;
@@ -573,13 +660,15 @@ figcaption {
 		grid-gap 						      : 20px;
 		grid-template-areas 	    :
 			" hero hero hero hero "
+			". history history ."
+      ". future future ."
+      ". experiments experiments ."
+
 			". current-projects current-projects ."
+
       ". main main ."
       ". project-card project-card."
 			". tool-kit tool-kit ."
-			". experiments experiments ."
-			". future history ."
-			". future-2 history-2 ."
 			". previous-projects previous-projects ."
 			". articles articles ."
 			". article article ."
@@ -591,9 +680,8 @@ figcaption {
 }
 
 
-
-
 /* 240. Layout - Desktop */
+
 
 @media screen and (min-width  : 1000px) {
 	.container {
@@ -601,13 +689,17 @@ figcaption {
 		grid-gap 						      : 20px;
 		grid-template-areas 		  :
 			" hero hero hero hero "
+      ". history history ."
+      ". future future ."
+      ". experiments experiments ."
+
+
+
       ". main main ."
       ". project-card project-card ."
-			". history future ."
+
 			". current-projects current-projects ."
 			". tool-kit tool-kit ."
-			". experiments experiments ."
-			". future-2 history-2 ."
 			". previous-projects previous-projects ."
 			". articles articles ."
 			". article article ."
@@ -621,12 +713,12 @@ figcaption {
   	height                    : auto;
   	float                     : right;
   	margin                    : 0 -620px 5px 10px;
-  	z-index                   : 20;
+  	z-index                   : 5;
   	position                  : relative;
   }
 
 	.previous-projects-card {
-		max-width                 : 360px;
+		max-width                 : 386px;
 	}
 
   .pull-quote {
@@ -635,4 +727,19 @@ figcaption {
   	float                     : right;
   	z-index                   : 100;
   }
+  .background-card {
+    max-width                   : 340px;
+    padding                     : 10px;
+    margin                      : 10px;
+    float                       : left;
+    text-align: center;
+  }
+  .slide-image {
+    height: 600px;
+  }
+
+  section {
+    margin: 0 0 200px 0;
+  }
+
 }

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>MrGrillet v4</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+      <link rel="stylesheet" type="text/css" href="assets/style.css">
+      <meta charset="UTF-8">
+  </head>
+  <body>
+    <div class="menu-toggle-button" onclick="toggleNav()" ><p>Menu</p></div>
+    <nav id="navigation-bar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects*</a></li>
+        <li><a href="posts.html">Notes</a></li>
+        <li><a href="#">Github</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="mailto:mrgrillet@gmail.com">Contact</a></li>
+      </ul>
+    </nav>
+<div class="container">
+  <main>
+				<div class="article-title">
+					<h1>sourceCoder</h1>
+          <p class="lead">This is my first attempt at building an application on my own. It's a new take on a job board targeted specifically for developers.</p>
+          <img src="http://g.recordit.co/GwSjb6UDhQ.gif" class="img-full">
+        </div>
+        <!--
+        <div class="article-meta">
+          <p>Published: </p>
+        </div> -->
+				<article>
+          <div class="article-body">
+          <h2>Background</h2>
+          <p>The intention was to pick an interesting problem and build a solution around it and learn Ruby on Rails along the way. If you <a href="https://twitter.com/search?f=tweets&vertical=default&q=%23learntocode%20%40mrgrillet&src=typd" target="_blank">follow me on Twitter</a>, you'll have seen lots of gifs and screenshots posted as I was budilding this project.</p>
+          <p>As a problem, I selected matching Junior Developers with great jobs.</p>
+          <p>Conversations and experience have shown me that the process of hiring junior developers is a tricky process for companies due to the range of applicant backgrounds and the hundreds of platforms like LinkedIn becoming bloated and unpopular with the Tech community. These platforms in an attempt to cater to every market lack features that help developers communicate their real value. My proposed solution was to create a database of developers that companies can tap into to quickly and find the ideal developer for their team.</p>
+          <p><img src="https://camo.githubusercontent.com/f146b3a7f69fc66c3de38192978fa30008200734/687474703a2f2f6d726772696c6c65742e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031382f30332f70726f66696c652d706167652e6a7067" class="img-right">This is going to be a really detailed breakdown so if there is some specific content that you'd like to skip to, use the links below. If you'd simply like to play with the app, you can do so by clicking <a href="http://sourcecoder.herokuapp.com/">here</a>.</p>
+          <h4>Table of contents</h4>
+          <ol>
+            <li><a href="">Objectives</a></li>
+            <li><a href="">The Stack</a></li>
+            <li><a href="">Features</a></li>
+            <li><a href="">Features</a></li>
+            <li><a href="#">Challenges</a></li>
+            <li><a href="#">Outcome</a></li>
+          </ol>
+          <h4>Product Objectives</h4>
+          <ul>
+            <li>Provide a solution to a real-world problem</li>
+            <li>Speeds up the process of finding relevant applicants</li>
+            <li>Clearly communicates the developers skillset based on experience and projects, rather than previous job titles</li>
+            <li>Allows both applicants and employers to manage the full hiring process and multiple jobs/applications in one space</li>
+            <li>Clean and easy to navigate design</li>
+            <li>Create a space where applicants can create profiles that grow with them over time</li>
+            <li>Encourage people not to post fake job ads that they don't monitor</li>
+          </ul>
+          <h4>Learning Objectives</h4>
+          <ul>
+            <li>Create something that looks as close as possible to a real live product</li>
+            <li>Stumble across challenges I didn't know existed</li>
+            <li>Get comfortable navigating Rails and MVC</li>
+            <li>Experiment with relational databases</li>
+            <li>Experiment with Carts and making data interesting</li>
+          </ul>
+          <h2>The Stack</h2>
+          <ul>
+            <li>Bootstrap (Customised to clean up the look and feel)</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Ruby On Rails</li>
+            <li>Postgres</li>
+            <li>Heroku</li>
+            <li>Gems:</li>
+              <ul>
+                <li>Devise</li>
+                <li>Bootstrap 4</li>
+                <li>Saas Rails</li>
+                <li>Charts RoR/ Chart.js</li>
+              </ul>
+          </ul>
+          <h2>Features</h2>
+            <img src="http://g.recordit.co/1pbUjMVsqa.gif" class="img-center">
+
+
+          <ul>
+            <li>Responsive</li>
+            <li>Dynamic & Nested Forms with JavaScript</li>
+            <li>User signup with email authentication</li>
+            <li>Users can add and edit content they own (CRUD)</li>
+            <li>Data displayed in Charts</li>
+            <li>Different content/ menus' based on User type: Employer/ Applicant/ admin</li>
+            <li>Link to multimedia: images, youtube videos, links to 3rd party sites</li>
+            <li>Ability for Admin to manage coding languages on the platform</li>
+            <li>Basic search for jobs and applicants</li>
+            <li>Dashboard for Admin to review KPIs</li>
+          </ul>
+
+          <h3>Applicant features</h3>
+          <ul>
+            <li>Search Jobs</li>
+            <li>Apply for jobs</li>
+            <li>Create profile page:</li>
+            <ul>
+              <li>Charts to illustrate experience</li>
+              <li>Opportunity to explain background and future goals</li>
+            </ul>
+          </ul>
+
+          <h3>Employer features</h3>
+          <ul>
+            <li>Search all applicants</li>
+            <li>Create and Edit Job Ads</li>
+            <li>View applications for jobs</li>
+            <li>Create profile page</li>
+          </ul>
+
+
+
+          <h3>Coming Soon</h3>
+          <p>I still have plans to add more features to the app to make it more interesting and life-like.</p>
+
+          <ul>
+            <li>Companies to pay monthly to search applicants and upload jobs</li>
+            <li>Pay to list featured jobs</li>
+            <li>Some content is hidden when reviewing applicant profiles who have not yet applied for a role at the employer company</li>
+          </ul>
+
+
+          <h2>Challanges & lessons learned<h2>
+
+          <h2>Conclusion</h2>
+          <p>I would love to hear any feedback or comments you might have. You can ping them over to my twitter account as I haven't added a comments section to this site yet.</p>
+          <p><a href="http://twitter.com/mrgrillet">@mrGrillet</a></p>
+          <p>Visit the app here...</p>
+
+
+
+
+					</div>
+					<div class="article-footer">
+
+            <div class="article-share">
+              <ul>
+                <li>Categories:</li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Category</a></li>
+              </ul>
+            </div>
+            <div class="article-share">
+              <ul>
+                <li>Share:</li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Email</a></li>
+              </ul>
+            </div>
+
+
+					</div>
+				</article>
+        </div>
+			</main>
+			<footer>
+				<div class="left">&copy; Peter Grillet - 2017</div>
+				<div class="right">
+				</div>
+			</footer>
+
+		<script src="assets/main.js"></script>
+	</body>
+</html>
